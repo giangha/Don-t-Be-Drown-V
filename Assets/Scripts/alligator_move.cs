@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class alligator_move : MonoBehaviour
 {
+    public GameObject aligator;
     public Transform target;//set target from inspector instead of looking in Update
     public float speed;
 
@@ -30,15 +31,15 @@ public class alligator_move : MonoBehaviour
         //  transform.Translate(Vector3.MoveTowards(Vector3.curr* Time.deltaTime, Camera.main.transform);
     }
 
-
+    
     void OnTriggerEnter2D(Collider2D other)
     {
-       // if (other.gameObject.CompareTag("Net"))
-        //{
+       if (other.gameObject.CompareTag("Net"))
+       {
             Invoke("Reappear", 15);
-            gameObject.SetActive(false);
+            aligator.gameObject.SetActive(false);
             other.gameObject.SetActive(false);
-       // }
+        }
     }
 
         void Reappear()
@@ -47,5 +48,5 @@ public class alligator_move : MonoBehaviour
         transform.position = position;
         gameObject.SetActive(true); 
         }
-
+        
 }
