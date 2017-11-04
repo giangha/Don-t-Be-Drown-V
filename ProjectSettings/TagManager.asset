@@ -9,6 +9,7 @@ TagManager:
   - Boat
   - windarea
   - Net
+  - net_tag
   layers:
   - Default
   - TransparentFX

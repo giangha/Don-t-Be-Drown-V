@@ -26,6 +26,9 @@ public class GameController : MonoBehaviour
     public GUIText scoreText;
     public int score;
 
+    public GUIText netText;
+    public int nets;
+
     // Hint
     public GUIText hintText;
 
@@ -39,6 +42,8 @@ public class GameController : MonoBehaviour
         net_drop = false;
         scoreUpdate();
         audioSource = GetComponent<AudioSource>();
+        nets = 5;
+        netUpdate();
     }
 
     // Create crates from above
@@ -48,7 +53,6 @@ public class GameController : MonoBehaviour
         yield return new WaitForSeconds(dropRate);
 
         // Thuan, you can add sound of dropping crate here
-
         for (int i = 0; i < crateCount; i++)
         {
             // Create crate and drop it
@@ -78,8 +82,14 @@ public class GameController : MonoBehaviour
 
     void scoreUpdate()
     {
-        scoreText.text = "Coins :" + score;
+        scoreText.text = "Coins:" + score;
         scoresound.Play();
+    }
+
+    void netUpdate()
+    {
+        netText.text = "Nets:" + nets;
+        
     }
 
     void Update()
@@ -104,7 +114,8 @@ public class GameController : MonoBehaviour
                     Destroy(totalCrates[i]);
                 }
                 //hintText.text = "Thank you very muchhhhhhhhhhhhh";
-                net_drop = false;
+                nets = 5;
+                netUpdate();
             }
             else
             {
@@ -115,7 +126,7 @@ public class GameController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.X))
         {
-            if (!net_drop)
+            if (nets >= 1)
             {
                 float x = 0;
                 float y = 4.96f;
@@ -124,6 +135,8 @@ public class GameController : MonoBehaviour
                 droppingPoint.position = pos;
                 Instantiate(net, droppingPoint.position, droppingPoint.rotation);
                 net_drop = true;
+                nets--;
+                netUpdate();
                 return;
             }
         }
