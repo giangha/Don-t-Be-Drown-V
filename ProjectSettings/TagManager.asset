@@ -10,6 +10,7 @@ TagManager:
   - windarea
   - Net
   - net_tag
+  - Alligator
   layers:
   - Default
   - TransparentFX

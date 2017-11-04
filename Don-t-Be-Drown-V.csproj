@@ -78,6 +78,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\avoid_collision.cs" />
     <Compile Include="Assets\EasyWater2D\ExampleScene\ExampleAssets\Fish.cs" />
     <Compile Include="Assets\EasyWater2D\ExampleScene\ExampleAssets\UIManager.cs" />
     <Compile Include="Assets\EasyWater2D\Water2D.cs" />
