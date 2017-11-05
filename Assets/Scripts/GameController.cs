@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
@@ -35,6 +36,10 @@ public class GameController : MonoBehaviour
     // Total crates on boat
     GameObject[] totalCrates;
 
+    public int boat_health = 100;
+    public Slider playerHealthSlider;
+
+
     void Start()
     {
         score = 0;
@@ -44,6 +49,9 @@ public class GameController : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         nets = 5;
         netUpdate();
+        boat_health = 100;
+        playerHealthSlider.maxValue = boat_health;
+        playerHealthSlider.value = boat_health;
     }
 
     // Create crates from above
@@ -79,7 +87,17 @@ public class GameController : MonoBehaviour
     /*public void AddCrate(GameObject newCrate){
 		totalCrates.Add (newCrate);
 	}*/
-
+    public void Alligator_Damage()
+    {
+        boat_health = boat_health - 5;
+        if(boat_health<=0)
+        {
+           // SceneManager.LoadScene(3);
+            //end game
+        }
+        playerHealthSlider.value=boat_health;
+       // playerHealthSlider.
+    }
     void scoreUpdate()
     {
         scoreText.text = "Coins:" + score;
@@ -126,6 +144,7 @@ public class GameController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.X))
         {
+            Alligator_Damage();
             if (nets >= 1)
             {
                 float x = 0;

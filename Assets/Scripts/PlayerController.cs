@@ -11,10 +11,16 @@ public class PlayerController : MonoBehaviour {
 	public Rigidbody2D rb;
 	public float speed;
 	public Boundary boundary;
+    private GameController gameController;
 
-	void Start()
+    void Start()
 	{
-		rb = GetComponent<Rigidbody2D>();
+        GameObject gameControllerObject = GameObject.FindGameObjectWithTag("GameController");
+        if (gameControllerObject != null)
+        {
+            gameController = gameControllerObject.GetComponent<GameController>();
+        }
+        rb = GetComponent<Rigidbody2D>();
 		// Thuan, you can add boat engine sound here
 
 	}
@@ -31,5 +37,6 @@ public class PlayerController : MonoBehaviour {
 			-3f
 		);
 	}
-		
+   
+
 }

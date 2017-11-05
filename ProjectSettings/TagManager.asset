@@ -11,6 +11,7 @@ TagManager:
   - Net
   - net_tag
   - Alligator
+  - playerHealthSlider
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - 
   - 
   - Alligator
-  - 
+  - Boat
   - 
   - 
   - 
