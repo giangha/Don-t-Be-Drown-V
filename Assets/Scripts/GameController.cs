@@ -144,7 +144,7 @@ public class GameController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.X))
         {
-            Alligator_Damage();
+            
             if (nets >= 1)
             {
                 float x = 0;
