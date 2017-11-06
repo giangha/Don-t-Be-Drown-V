@@ -15,7 +15,7 @@ public class alligator_move : MonoBehaviour
     public bool sleep;
     public float TimeInNet;
     private Rigidbody2D rb2d;
-    private float pushforce = 500f;
+    private float pushforce = 250f;
 
     void Start()
     {
@@ -96,7 +96,7 @@ public class alligator_move : MonoBehaviour
         
        
         rb2d.AddForce(Vector2.right * pushforce);
-        Invoke("Reappear", 5);
+        Invoke("Reappear", 15);
         
     }
 
