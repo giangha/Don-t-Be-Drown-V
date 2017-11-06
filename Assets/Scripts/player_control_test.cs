@@ -15,6 +15,12 @@ public class player_control_test : MonoBehaviour {
 	void Update () {
 
         float moveHorizontal = Input.GetAxis("Horizontal");
+		if(Input.GetKey("right")) {
+			transform.localScale = new Vector3(-1,1,1);
+		}
+		else if(Input.GetKey("left")){
+			transform.localScale = new Vector3(1,1,1);	
+		}
 
         Vector2 move = new Vector2(moveHorizontal, 0.0f);
         rb.velocity = move * speed;
