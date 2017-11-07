@@ -7,12 +7,14 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     // Crates
-    public GameObject crate;
+    public GameObject woodCrate;
+	public GameObject metalCrate;
     public GameObject boat;
     public GameObject net;
     public Transform droppingPoint;
     public int crateCount;
-    public float dropRate;
+    public float dropRateWood;
+	public float dropRateMetal;
     bool net_drop;
     public AudioSource scoresound;
     public AudioSource dropcrate;
@@ -43,7 +45,7 @@ public class GameController : MonoBehaviour
     void Start()
     {
         score = 0;
-        StartCoroutine(SpawnWave());
+        //StartCoroutine(SpawnWave());
         net_drop = false;
         scoreUpdate();
         audioSource = GetComponent<AudioSource>();
@@ -52,8 +54,12 @@ public class GameController : MonoBehaviour
         boat_health = 100;
         playerHealthSlider.maxValue = boat_health;
         playerHealthSlider.value = boat_health;
+
+		InvokeRepeating ("SpawnWoodCrate", dropRateWood, dropRateWood);
+		InvokeRepeating ("SpawnMetalCrate", dropRateMetal, dropRateMetal);
     }
 
+	/*
     // Create crates from above
     IEnumerator SpawnWave()
     {
@@ -74,6 +80,32 @@ public class GameController : MonoBehaviour
             yield return new WaitForSeconds(dropRate);
         }
     }
+	*/
+
+	void SpawnWoodCrate ()
+	{
+		// If the player has no health left...
+		if(startingTime <= 0f)
+		{
+			// ... exit the function.
+			return;
+		}
+		// Create an instance of the enemy prefab at the randomly selected spawn point's position and rotation.
+		Instantiate (woodCrate, droppingPoint.position, droppingPoint.rotation);
+	}
+
+	void SpawnMetalCrate ()
+	{
+		// If the player has no health left...
+		if(startingTime <= 0f)
+		{
+			// ... exit the function.
+			return;
+		}
+		// Create an instance of the enemy prefab at the randomly selected spawn point's position and rotation.
+		Instantiate (metalCrate, droppingPoint.position, droppingPoint.rotation);
+	}
+
 
     // Add score to every catched crate
     public void AddScore(int newScoreValue)

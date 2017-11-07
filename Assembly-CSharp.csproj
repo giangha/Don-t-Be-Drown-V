@@ -66,6 +66,7 @@
      <Compile Include="Assets\Scripts\AttachOnContact.cs" />
      <Compile Include="Assets\Scripts\BoundaryController.cs" />
      <Compile Include="Assets\Scripts\CrateController.cs" />
+     <Compile Include="Assets\Scripts\CrateManager.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\LoadSceneOnClick.cs" />
      <Compile Include="Assets\Scripts\net_controller.cs" />
