@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 65019177649727964}
   - component: {fileID: 54918434274958598}
   - component: {fileID: 114775800153815678}
+  - component: {fileID: 111969434102767414}
   m_Layer: 0
   m_Name: Crate
   m_TagString: Crate
@@ -99,6 +100,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.052842, y: 0.84147596, z: 1}
   m_Center: {x: 0.9775675, y: 0.5019939, z: 0}
+--- !u!111 &111969434102767414
+Animation:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1946763614818740}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 22103a6efd8541748b4338985bf796ba, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!114 &114775800153815678
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -145,7 +160,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -146601037
-  m_SortingLayer: 1
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 97552f21a6b1e4f61a2f4869c3552de0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

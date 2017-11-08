@@ -12,6 +12,7 @@ TagManager:
   - net_tag
   - Alligator
   - playerHealthSlider
+  - water
   layers:
   - Default
   - TransparentFX

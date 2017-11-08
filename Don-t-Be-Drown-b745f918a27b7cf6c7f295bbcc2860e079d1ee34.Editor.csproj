@@ -124,6 +124,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\RainMaker\Editor\RainMakerEditor.cs" />
+    <Compile Include="Assets\Spriter2UnityDX\Editor\AnimationBuilder.cs" />
+    <Compile Include="Assets\Spriter2UnityDX\Editor\CustomEditors.cs" />
+    <Compile Include="Assets\Spriter2UnityDX\Editor\PrefabBuilder.cs" />
+    <Compile Include="Assets\Spriter2UnityDX\Editor\S2USettings.cs" />
+    <Compile Include="Assets\Spriter2UnityDX\Editor\ScmlImportOptions.cs" />
+    <Compile Include="Assets\Spriter2UnityDX\Editor\ScmlPostProcessor.cs" />
+    <Compile Include="Assets\Spriter2UnityDX\Editor\ScmlSupport.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\RainMaker\Prefab\RainShader.shader" />
