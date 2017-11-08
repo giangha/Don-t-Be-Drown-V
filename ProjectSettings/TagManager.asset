@@ -58,12 +58,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Alligator
-    uniqueID: 4065365397
-    locked: 0
   - name: crate
     uniqueID: 2393598611
     locked: 0
   - name: boat
     uniqueID: 244941969
+    locked: 0
+  - name: Alligator
+    uniqueID: 4065365397
     locked: 0

@@ -38,7 +38,7 @@ public class alligator_move : MonoBehaviour
          target = GameObject.FindWithTag("Boat").transform;
 
          float step = speed * Time.deltaTime;
-         Vector3 offset = new Vector3(0, -.5f, 0);
+         Vector3 offset = new Vector3(0, .7f, 0);
          Vector3 targetHeading = target.position + offset;
          Vector3 targetDirection = targetHeading.normalized;
          float old_x_location = transform.position.x;
@@ -48,17 +48,13 @@ public class alligator_move : MonoBehaviour
 
          float difference_between_locations = old_x_location - new_x_location;
          if (difference_between_locations < 0) difference_between_locations = difference_between_locations * -1;
-         if (difference_between_locations < .01)
+         if (difference_between_locations < 1)
          {
-             pushBack();
-             angry = true;
-             gameController.Alligator_Damage();
-             
-            // aligator.gameObject.SetActive(false);
-         }
+            Invoke("Alligator_Attack", 1);
 
-        //   Vector3 position = new Vector3(Random.Range(-1, 1), 0, 0);
-        //  transform.Translate(Vector3.MoveTowards(Vector3.curr* Time.deltaTime, Camera.main.transform);
+        }
+
+
     }
 
     
@@ -73,8 +69,8 @@ public class alligator_move : MonoBehaviour
             speed = .1f;
             Invoke("unCaught", 5);
         }
-        if (other.gameObject.CompareTag("Boat")) {
-            angry = true; }
+      //  if (other.gameObject.CompareTag("Boat")) {
+       //     angry = true; }
        
       //  if (other.gameObject.CompareTag("boat_area"))
       //  {
@@ -108,9 +104,38 @@ public class alligator_move : MonoBehaviour
         rb2d.Sleep();
         angry = false;
         
-        Vector3 position = new Vector3(5.29f,-2.81f,0);
+        Vector3 position = new Vector3(10.73f,-4.6f,0);
         transform.position = position;
         
         }
-        
+
+    void Alligator_Attack()
+    {
+        CancelInvoke();
+        amin.SetBool("angry", angry);
+        amin.SetBool("sleep", sleep);
+        amin.SetBool("caught", caught);
+        target = GameObject.FindWithTag("Boat").transform;
+
+        float step = speed * Time.deltaTime;
+        Vector3 offset = new Vector3(0, .2f, 0);
+        Vector3 targetHeading = target.position + offset;
+        Vector3 targetDirection = targetHeading.normalized;
+        float old_x_location = transform.position.x;
+        transform.position = Vector3.MoveTowards(transform.position, targetHeading, step);
+        float new_x_location = targetHeading.x;
+
+
+        float difference_between_locations = old_x_location - new_x_location;
+        if (difference_between_locations < 0) difference_between_locations = difference_between_locations * -1;
+        if (difference_between_locations < 1)
+        {
+            pushBack();
+            angry = true;
+            gameController.Alligator_Damage();
+
+        }
+
+    }
+
 }
