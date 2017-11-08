@@ -7,18 +7,21 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     // Crates
-    public GameObject woodCrate;
-	public GameObject metalCrate;
+    //public GameObject woodCrate;
+	//public GameObject metalCrate;
+
     public GameObject boat;
+
     public GameObject net;
-    public Transform droppingPoint;
+	public Transform netPoint;
+    //public Transform droppingPoint;
     public int crateCount;
-    public float dropRateWood;
-	public float dropRateMetal;
+    //public float dropRateWood;
+	//public float dropRateMetal;
     bool net_drop;
     public AudioSource scoresound;
     public AudioSource dropcrate;
-    AudioSource audioSource;
+    //AudioSource audioSource;
 
 
     // Time
@@ -46,17 +49,17 @@ public class GameController : MonoBehaviour
     {
         score = 0;
         //StartCoroutine(SpawnWave());
-        net_drop = false;
+        //net_drop = false;
         scoreUpdate();
-        audioSource = GetComponent<AudioSource>();
+        //audioSource = GetComponent<AudioSource>();
         nets = 5;
         netUpdate();
         boat_health = 100;
         playerHealthSlider.maxValue = boat_health;
         playerHealthSlider.value = boat_health;
 
-		InvokeRepeating ("SpawnWoodCrate", dropRateWood, dropRateWood);
-		InvokeRepeating ("SpawnMetalCrate", dropRateMetal, dropRateMetal);
+		//InvokeRepeating ("SpawnWoodCrate", dropRateWood, dropRateWood);
+		//InvokeRepeating ("SpawnMetalCrate", dropRateMetal, dropRateMetal);
     }
 
 	/*
@@ -82,6 +85,7 @@ public class GameController : MonoBehaviour
     }
 	*/
 
+	/*
 	void SpawnWoodCrate ()
 	{
 		// If the player has no health left...
@@ -106,7 +110,7 @@ public class GameController : MonoBehaviour
 		Instantiate (metalCrate, droppingPoint.position, droppingPoint.rotation);
 	}
 
-
+	*/
     // Add score to every catched crate
     public void AddScore(int newScoreValue)
     {
@@ -174,23 +178,24 @@ public class GameController : MonoBehaviour
             return;
         }
 
+		/*
         if (Input.GetKey(KeyCode.X))
         {
             
             if (nets >= 1)
             {
-                float x = 0;
-                float y = 4.96f;
-                float z = 0;
-                Vector3 pos = new Vector3(x, y, z);
-                droppingPoint.position = pos;
-                Instantiate(net, droppingPoint.position, droppingPoint.rotation);
+				Rigidbody2D netRid;
+				var Clone = Instantiate(net, netPoint.position, netPoint.rotation);
+				netRid = Clone.GetComponent<Rigidbody2D> ();
+				netRid.AddForce (transform.right * 1000);
+				netRid.AddForce (transform.up * 10000);
                 net_drop = true;
                 nets--;
                 netUpdate();
                 return;
             }
         }
+        */
 
         if (startingTime <= 0)
         {
@@ -207,5 +212,27 @@ public class GameController : MonoBehaviour
         }
     }
 
+
+	private float shootTime = 0;
+	private float shootRate = 0.5f;
+	void FixedUpdate(){
+		if (Input.GetKey("up"))
+		{
+
+			if (nets >= 1 && Time.time > shootTime)
+			{
+				shootTime = Time.time + shootRate;
+				Rigidbody2D netRid;
+				var Clone = Instantiate(net, netPoint.position, netPoint.rotation);
+				netRid = Clone.GetComponent<Rigidbody2D> ();
+				netRid.AddForce (transform.right * 100);
+				netRid.AddForce (transform.up * 100);
+				net_drop = true;
+				nets--;
+				netUpdate();
+				return;
+			}
+		}
+	}
  
 }

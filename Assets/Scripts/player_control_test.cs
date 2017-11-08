@@ -6,7 +6,7 @@ public class player_control_test : MonoBehaviour {
     public Rigidbody2D rb;
     public float speed;
 	public GameObject net;
-	public Transform netPoint;
+
 
     // Use this for initialization
     void Start () {
@@ -27,9 +27,6 @@ public class player_control_test : MonoBehaviour {
         Vector2 move = new Vector2(moveHorizontal, 0.0f);
         rb.velocity = move * speed;
 
-		if (Input.GetKey("up")){
-			Instantiate (net, netPoint.position, netPoint.rotation);
-		}
     }
 		
 }

@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4306597508158136}
   - component: {fileID: 212205236660642950}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: crate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 65019177649727964}
   - component: {fileID: 54918434274958598}
   - component: {fileID: 114775800153815678}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WoodCrate
   m_TagString: Crate
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1946763614818740}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1.052842, y: 0.84147596, z: 1}
