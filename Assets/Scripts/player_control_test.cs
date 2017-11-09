@@ -11,6 +11,8 @@ public class player_control_test : MonoBehaviour {
 	public GameObject net;
 	public Transform netDropPoint;
 
+	private bool toTheRight;
+
     // Use this for initialization
     void Start () {
         rb = GetComponent<Rigidbody2D>();
@@ -24,9 +26,11 @@ public class player_control_test : MonoBehaviour {
         float moveHorizontal = Input.GetAxis("Horizontal");
 		if(Input.GetKey("right")) {
 			transform.localScale = new Vector3(-1,1,1);
+			toTheRight = true;
 		}
 		else if(Input.GetKey("left")){
 			transform.localScale = new Vector3(1,1,1);	
+			toTheRight = false;
 		}
 
         Vector2 move = new Vector2(moveHorizontal, 0.0f);
@@ -60,8 +64,12 @@ public class player_control_test : MonoBehaviour {
 				Rigidbody2D netRid;
 				var Clone = Instantiate(net, netDropPoint.position, netDropPoint.rotation);
 				netRid = Clone.GetComponent<Rigidbody2D> ();
-				netRid.AddForce (transform.right * 100);
-				netRid.AddForce (transform.up * 100);
+				if (toTheRight == true || Input.GetKey("right")) {
+					netRid.AddForce (transform.right * 300);
+				} else {
+					netRid.AddForce (transform.right * -300);
+				}
+				netRid.AddForce (transform.up * 300);
 				//net_drop = true;
 				//nets--;
 				//netUpdate();

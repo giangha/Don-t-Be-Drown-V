@@ -9,7 +9,7 @@ public class GameController : MonoBehaviour
     // Crates
     public GameObject crate;
     public GameObject boat;
-    public GameObject net;
+    //public GameObject net;
     public Transform droppingPoint;
 
 	public Transform netDropPoint;
@@ -144,7 +144,7 @@ public class GameController : MonoBehaviour
             }
             return;
         }
-
+		/*
         if (Input.GetKey(KeyCode.X))
         {
             
@@ -162,7 +162,7 @@ public class GameController : MonoBehaviour
                 return;
             }
         }
-
+		*/
         if (startingTime <= 0)
         {
             if (score >= 50)
