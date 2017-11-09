@@ -3655,6 +3655,7 @@ MonoBehaviour:
   rb: {fileID: 0}
   speed: 3
   scare: 0
+  netTotal: 5
   net: {fileID: 1274894287080280, guid: 9437490f36f0fd4469647ca35ac92cfc, type: 2}
   netDropPoint: {fileID: 317618681}
 --- !u!1 &238180864

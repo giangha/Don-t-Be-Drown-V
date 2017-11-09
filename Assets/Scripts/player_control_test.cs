@@ -8,6 +8,7 @@ public class player_control_test : MonoBehaviour {
     public bool scare;
     private Animator amin;
 
+	public int netTotal;
 	public GameObject net;
 	public Transform netDropPoint;
 
@@ -55,7 +56,7 @@ public class player_control_test : MonoBehaviour {
 	private float shootRate = 0.5f;
 
 	void FixedUpdate(){
-		if (Input.GetKey("up"))
+		if (Input.GetKey("up") && netTotal > 0)
 		{
 
 			if (Time.time > shootTime)
@@ -71,7 +72,7 @@ public class player_control_test : MonoBehaviour {
 				}
 				netRid.AddForce (transform.up * 300);
 				//net_drop = true;
-				//nets--;
+				netTotal-- ;
 				//netUpdate();
 				return;
 			}
