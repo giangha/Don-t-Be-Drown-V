@@ -40,7 +40,7 @@ public class alligator_move : MonoBehaviour
          target = GameObject.FindWithTag("Boat").transform;
 
          float step = speed * Time.deltaTime;
-         Vector3 offset = new Vector3(0, .7f, 0);
+         Vector3 offset = new Vector3(0, 0f, 0);
          Vector3 targetHeading = target.position + offset;
          Vector3 targetDirection = targetHeading.normalized;
          float old_x_location = transform.position.x;
@@ -50,9 +50,12 @@ public class alligator_move : MonoBehaviour
 
          float difference_between_locations = old_x_location - new_x_location;
          if (difference_between_locations < 0) difference_between_locations = difference_between_locations * -1;
-         if (difference_between_locations < 1)
+         if (difference_between_locations < 2.7)
          {
-            Invoke("Alligator_Attack", 1);
+            //  Invoke("Alligator_Attack", 0);
+            gameController.Alligator_Damage();
+            Invoke("Reappear", 15);
+            aligator.gameObject.SetActive(false);
 
         }
 
@@ -70,6 +73,7 @@ public class alligator_move : MonoBehaviour
             caught = true;
             speed = .1f;
             Invoke("unCaught", 5);
+            Invoke("Reappear", 15);
         }
       //  if (other.gameObject.CompareTag("Boat")) {
        //     angry = true; }
@@ -132,8 +136,8 @@ public class alligator_move : MonoBehaviour
         if (difference_between_locations < 0) difference_between_locations = difference_between_locations * -1;
         if (difference_between_locations < 1)
         {
-           // pushBack();
-            
+            // pushBack();
+           
             gameController.Alligator_Damage();
             
         }
