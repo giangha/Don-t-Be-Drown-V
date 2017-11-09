@@ -98,7 +98,7 @@ public class GameController : MonoBehaviour
         boat_health = boat_health - 5;
         if(boat_health<=0)
         {
-           // SceneManager.LoadScene(3);
+           SceneManager.LoadScene(3);
             //end game
         }
         playerHealthSlider.value=boat_health;
@@ -137,7 +137,7 @@ public class GameController : MonoBehaviour
 					}
                 }
                 //hintText.text = "Thank you very muchhhhhhhhhhhhh";
-                nets = 5;
+              //  nets = 5;
                 netUpdate();
             }
             else
@@ -152,7 +152,7 @@ public class GameController : MonoBehaviour
             
             
                 if(nets>0)
-                nets--;
+                //nets--;
                 netUpdate();
                 return;
             
