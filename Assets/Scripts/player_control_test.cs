@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,11 +8,11 @@ public class player_control_test : MonoBehaviour {
     public float speed;
     public bool scare;
     private Animator amin;
-
+    private float throwcd = 3f;
 	public int netTotal;
 	public GameObject net;
 	public Transform netDropPoint;
-
+    public bool throws;
 	private bool toTheRight;
 	private GameController gameController;
 
@@ -37,6 +38,7 @@ public class player_control_test : MonoBehaviour {
 	void Update () {
         amin.SetFloat("speed", Mathf.Abs(Input.GetAxis("Horizontal")));
         amin.SetBool("scare", scare);
+        amin.SetBool("throw", throws);
         float moveHorizontal = Input.GetAxis("Horizontal");
 		if(Input.GetKey("right")) {
 			transform.localScale = new Vector3(-1,1,1);
@@ -74,8 +76,9 @@ public class player_control_test : MonoBehaviour {
 	void FixedUpdate(){
 		if (Input.GetKey("up") && netTotal > 0)
 		{
-
-			if (Time.time > shootTime)
+            throws = true;
+            
+            if (Time.time > shootTime)
 			{
 				shootTime = Time.time + shootRate;
 				Rigidbody2D netRid;
@@ -89,6 +92,7 @@ public class player_control_test : MonoBehaviour {
 				netRid.AddForce (transform.up * 300);
 				//net_drop = true;
 				netTotal-- ;
+<<<<<<< HEAD
 				gameController.nets = netTotal;
 				gameController.netUpdate ();
 				return;
@@ -106,5 +110,26 @@ public class player_control_test : MonoBehaviour {
 		}
 
 	}
+=======
+                //netUpdate();
+                
+				return;
+			}
+           
+        }
+        if (throws)
+        {
+            throws = false;
+
+        }
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Alligator"))
+        {
+            scare = true;
+        }
+    }
+>>>>>>> origin/master
 
 }

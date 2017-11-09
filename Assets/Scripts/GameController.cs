@@ -21,7 +21,7 @@ public class GameController : MonoBehaviour
     public AudioSource dropcrate;
     AudioSource audioSource;
 
-
+    private player_control_test player;
     // Time
     public float startingTime;
     public GUIText theText;
@@ -45,6 +45,7 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
+        
         score = 0;
         StartCoroutine(SpawnWave());
         net_drop = false;
@@ -55,6 +56,7 @@ public class GameController : MonoBehaviour
         boat_health = 100;
         playerHealthSlider.maxValue = boat_health;
         playerHealthSlider.value = boat_health;
+        
     }
 
     // Create crates from above
@@ -92,6 +94,7 @@ public class GameController : MonoBehaviour
 	}*/
     public void Alligator_Damage()
     {
+             
         boat_health = boat_health - 5;
         if(boat_health<=0)
         {
@@ -143,25 +146,18 @@ public class GameController : MonoBehaviour
             }
             return;
         }
-		/*
-        if (Input.GetKey(KeyCode.X))
+		
+        if (Input.GetKeyUp("up"))
         {
             
-            if (nets >= 1)
-            {
-                float x = 0;
-                float y = 4.96f;
-                float z = 0;
-                Vector3 pos = new Vector3(x, y, z);
-                droppingPoint.position = pos;
-                Instantiate(net, droppingPoint.position, droppingPoint.rotation);
-                net_drop = true;
+            
+                if(nets>0)
                 nets--;
                 netUpdate();
                 return;
-            }
+            
         }
-		*/
+		
         if (startingTime <= 0)
         {
             if (score >= 50)

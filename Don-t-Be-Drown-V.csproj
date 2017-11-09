@@ -101,6 +101,9 @@
     <Compile Include="Assets\Scripts\QuitOnClick.cs" />
     <Compile Include="Assets\Scripts\WindArea.cs" />
     <Compile Include="Assets\Scripts\WindDirection.cs" />
+    <Compile Include="Assets\Spriter2UnityDX\Runtime\EntityRenderer.cs" />
+    <Compile Include="Assets\Spriter2UnityDX\Runtime\SortingOrderUpdater.cs" />
+    <Compile Include="Assets\Spriter2UnityDX\Runtime\TextureController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\RainMaker\Prefab\RainShader.shader" />

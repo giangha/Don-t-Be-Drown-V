@@ -16,6 +16,7 @@ public class alligator_move : MonoBehaviour
     public float TimeInNet;
     private Rigidbody2D rb2d;
     private float pushforce = 250f;
+   
 
     void Start()
     {
@@ -27,6 +28,7 @@ public class alligator_move : MonoBehaviour
             gameController = gameControllerObject.GetComponent<GameController>();
         }
         amin = gameObject.GetComponent<Animator>();
+        
     }
 
     // Update is called once per frame
@@ -38,7 +40,7 @@ public class alligator_move : MonoBehaviour
          target = GameObject.FindWithTag("Boat").transform;
 
          float step = speed * Time.deltaTime;
-         Vector3 offset = new Vector3(0, .7f, 0);
+         Vector3 offset = new Vector3(0, 0f, 0);
          Vector3 targetHeading = target.position + offset;
          Vector3 targetDirection = targetHeading.normalized;
          float old_x_location = transform.position.x;
@@ -48,9 +50,12 @@ public class alligator_move : MonoBehaviour
 
          float difference_between_locations = old_x_location - new_x_location;
          if (difference_between_locations < 0) difference_between_locations = difference_between_locations * -1;
-         if (difference_between_locations < 1)
+         if (difference_between_locations < 2.7)
          {
-            Invoke("Alligator_Attack", 1);
+            //  Invoke("Alligator_Attack", 0);
+            gameController.Alligator_Damage();
+            Invoke("Reappear", 15);
+            aligator.gameObject.SetActive(false);
 
         }
 
@@ -68,6 +73,7 @@ public class alligator_move : MonoBehaviour
             caught = true;
             speed = .1f;
             Invoke("unCaught", 5);
+            Invoke("Reappear", 15);
         }
       //  if (other.gameObject.CompareTag("Boat")) {
        //     angry = true; }
@@ -84,10 +90,10 @@ public class alligator_move : MonoBehaviour
     void unCaught()
     {
         caught = false;
-        speed = 5f;
+        speed = 1f;
     }
 
-    void pushBack()
+   /* void pushBack()
     {
         
        
@@ -96,13 +102,13 @@ public class alligator_move : MonoBehaviour
         
     }
 
-
+    */
     void Reappear()
         {
         CancelInvoke();
         gameObject.SetActive(true); 
         rb2d.Sleep();
-        angry = false;
+       
         
         Vector3 position = new Vector3(10.73f,-4.6f,0);
         transform.position = position;
@@ -130,10 +136,10 @@ public class alligator_move : MonoBehaviour
         if (difference_between_locations < 0) difference_between_locations = difference_between_locations * -1;
         if (difference_between_locations < 1)
         {
-            pushBack();
-            angry = true;
+            // pushBack();
+           
             gameController.Alligator_Damage();
-
+            
         }
 
     }
