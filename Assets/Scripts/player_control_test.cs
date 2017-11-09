@@ -100,7 +100,7 @@ public class player_control_test : MonoBehaviour {
 		}
 
 		// Buying net
-		if (transform.position.x < -5.5 && Input.GetKey(KeyCode.B)) {
+		if (transform.position.x < -5.5 && Input.GetKey(KeyCode.B) && gameController.score >= 20) {
 			if (Time.time > buyTime) {
 				buyTime = Time.time + buyRate;
 				netTotal += 2;
