@@ -72,8 +72,8 @@ public class alligator_move : MonoBehaviour
             other.gameObject.SetActive(false);
             caught = true;
             speed = .1f;
-            Invoke("unCaught", 5);
-            Invoke("Reappear", 15);
+            Invoke("unCaught", 15);
+          //  Invoke("Reappear", 15);
         }
       //  if (other.gameObject.CompareTag("Boat")) {
        //     angry = true; }

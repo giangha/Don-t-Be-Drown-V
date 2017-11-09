@@ -224,8 +224,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 244941969
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ed8f612de5716e94da71338316e1405b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -244,7 +244,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 401742878}
   m_LocalRotation: {x: -0, y: -0, z: -0.99996865, w: -0.007925943}
-  m_LocalPosition: {x: 2.85, y: -5.6197233, z: 0}
+  m_LocalPosition: {x: 0.96, y: -5.62, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -686,6 +686,16 @@ Prefab:
       propertyPath: m_GravityScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 212387655961825130, guid: ad4851421c6604b3b816c417ee7c8c05,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1901368685
+      objectReference: {fileID: 0}
+    - target: {fileID: 212387655961825130, guid: ad4851421c6604b3b816c417ee7c8c05,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad4851421c6604b3b816c417ee7c8c05, type: 2}
   m_IsPrefabParent: 0
@@ -899,8 +909,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -229601899
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f436ef9ad89cdb04199c736a3dc977b4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -918,13 +928,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 858005101}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.0680938, y: -1.6131133, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.2369971, w: 0.9715104}
+  m_LocalPosition: {x: -1.88, y: -3.79, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 27.419}
 --- !u!1 &1018518835
 GameObject:
   m_ObjectHideFlags: 0
@@ -1172,6 +1182,16 @@ Prefab:
         type: 2}
       propertyPath: m_GravityScale
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212387655961825130, guid: ad4851421c6604b3b816c417ee7c8c05,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1901368685
+      objectReference: {fileID: 0}
+    - target: {fileID: 212387655961825130, guid: ad4851421c6604b3b816c417ee7c8c05,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad4851421c6604b3b816c417ee7c8c05, type: 2}
@@ -1451,6 +1471,16 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 212387655961825130, guid: ad4851421c6604b3b816c417ee7c8c05,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1901368685
+      objectReference: {fileID: 0}
+    - target: {fileID: 212387655961825130, guid: ad4851421c6604b3b816c417ee7c8c05,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad4851421c6604b3b816c417ee7c8c05, type: 2}
   m_IsPrefabParent: 0
@@ -1501,6 +1531,16 @@ Prefab:
         type: 2}
       propertyPath: m_GravityScale
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212387655961825130, guid: ad4851421c6604b3b816c417ee7c8c05,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1901368685
+      objectReference: {fileID: 0}
+    - target: {fileID: 212387655961825130, guid: ad4851421c6604b3b816c417ee7c8c05,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad4851421c6604b3b816c417ee7c8c05, type: 2}
@@ -1686,6 +1726,16 @@ Prefab:
         type: 2}
       propertyPath: m_GravityScale
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212387655961825130, guid: ad4851421c6604b3b816c417ee7c8c05,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1901368685
+      objectReference: {fileID: 0}
+    - target: {fileID: 212387655961825130, guid: ad4851421c6604b3b816c417ee7c8c05,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad4851421c6604b3b816c417ee7c8c05, type: 2}
