@@ -92,7 +92,7 @@ public class player_control_test : MonoBehaviour {
 				netRid.AddForce (transform.up * 300);
 				//net_drop = true;
 				netTotal-- ;
-<<<<<<< HEAD
+
 				gameController.nets = netTotal;
 				gameController.netUpdate ();
 				return;
@@ -106,11 +106,11 @@ public class player_control_test : MonoBehaviour {
 				netTotal += 2;
 				gameController.nets = netTotal;
 				gameController.netUpdate ();
-			}
-		}
+			
+		
 
-	}
-=======
+	
+
                 //netUpdate();
                 
 				return;
@@ -130,6 +130,6 @@ public class player_control_test : MonoBehaviour {
             scare = true;
         }
     }
->>>>>>> origin/master
+
 
 }

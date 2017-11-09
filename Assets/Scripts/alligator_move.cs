@@ -54,8 +54,8 @@ public class alligator_move : MonoBehaviour
          {
             //  Invoke("Alligator_Attack", 0);
             gameController.Alligator_Damage();
-            Invoke("Reappear", 15);
-            aligator.gameObject.SetActive(false);
+          //  Invoke("Reappear", 15);
+           // aligator.gameObject.SetActive(false);
 
         }
 
