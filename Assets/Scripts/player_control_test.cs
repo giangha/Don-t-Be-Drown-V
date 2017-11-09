@@ -51,7 +51,13 @@ public class player_control_test : MonoBehaviour {
 
         Vector2 move = new Vector2(moveHorizontal, 0.0f);
         rb.velocity = move * speed;
+
+		gameController.nets = netTotal;
+		gameController.netUpdate ();
     }
+
+
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Alligator"))
@@ -67,8 +73,8 @@ public class player_control_test : MonoBehaviour {
         }
     }
 
-	private float shootTime = 0;
-	private float shootRate = 0.5f;
+	private float shootTime = 1;
+	private float shootRate = 1.0f;
 
 	private float buyTime = 0;
 	private float buyRate = 1.0f;
@@ -78,6 +84,8 @@ public class player_control_test : MonoBehaviour {
 		{
             throws = true;
             
+
+
             if (Time.time > shootTime)
 			{
 				shootTime = Time.time + shootRate;
@@ -90,13 +98,11 @@ public class player_control_test : MonoBehaviour {
 					netRid.AddForce (transform.right * -150);
 				}
 				netRid.AddForce (transform.up * 300);
-				//net_drop = true;
-				netTotal-- ;
-
+				netTotal--;
 				gameController.nets = netTotal;
 				gameController.netUpdate ();
-				return;
 			}
+
 		}
 
 		// Buying net

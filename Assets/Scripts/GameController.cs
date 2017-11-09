@@ -51,8 +51,8 @@ public class GameController : MonoBehaviour
         net_drop = false;
         scoreUpdate();
         audioSource = GetComponent<AudioSource>();
-        nets = 5;
-        netUpdate();
+        //nets = 5;
+        //netUpdate();
         boat_health = 100;
         playerHealthSlider.maxValue = boat_health;
         playerHealthSlider.value = boat_health;
@@ -110,7 +110,7 @@ public class GameController : MonoBehaviour
         scoresound.Play();
     }
 
-    public void netUpdate()
+	public void netUpdate()
     {
         netText.text = "Nets:" + nets;
         
@@ -137,25 +137,14 @@ public class GameController : MonoBehaviour
 					}
                 }
                 //hintText.text = "Thank you very muchhhhhhhhhhhhh";
-                nets = 5;
-                netUpdate();
+                //nets = 5;
+                //netUpdate();
             }
             else
             {
                 hintText.text = "please go to shelter to unload crates";
             }
             return;
-        }
-		
-        if (Input.GetKeyUp("up"))
-        {
-            
-            
-                if(nets>0)
-                nets--;
-                netUpdate();
-                return;
-            
         }
 		
         if (startingTime <= 0)
@@ -172,5 +161,7 @@ public class GameController : MonoBehaviour
             // Detroy crate when go out boundary
         }
     }
+
+
 		
 }
