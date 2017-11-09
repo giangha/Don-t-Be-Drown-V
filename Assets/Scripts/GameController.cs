@@ -107,7 +107,7 @@ public class GameController : MonoBehaviour
         scoresound.Play();
     }
 
-    void netUpdate()
+    public void netUpdate()
     {
         netText.text = "Nets:" + nets;
         
