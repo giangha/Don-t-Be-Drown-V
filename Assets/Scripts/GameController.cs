@@ -104,7 +104,7 @@ public class GameController : MonoBehaviour
         playerHealthSlider.value=boat_health;
        // playerHealthSlider.
     }
-    void scoreUpdate()
+    public void scoreUpdate()
     {
         scoreText.text = "Coins:" + score;
         scoresound.Play();

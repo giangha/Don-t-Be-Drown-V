@@ -106,13 +106,9 @@ public class player_control_test : MonoBehaviour {
 				netTotal += 2;
 				gameController.nets = netTotal;
 				gameController.netUpdate ();
-			
-		
 
-	
-
-                //netUpdate();
-                
+				gameController.score -= 20;
+				gameController.scoreUpdate ();
 				return;
 			}
            
