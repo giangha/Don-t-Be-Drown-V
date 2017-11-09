@@ -7,6 +7,10 @@ public class player_control_test : MonoBehaviour {
     public float speed;
     public bool scare;
     private Animator amin;
+
+	public GameObject net;
+	public Transform netDropPoint;
+
     // Use this for initialization
     void Start () {
         rb = GetComponent<Rigidbody2D>();
@@ -42,4 +46,28 @@ public class player_control_test : MonoBehaviour {
             scare = true;
         }
     }
+
+	private float shootTime = 0;
+	private float shootRate = 0.5f;
+
+	void FixedUpdate(){
+		if (Input.GetKey("up"))
+		{
+
+			if (Time.time > shootTime)
+			{
+				shootTime = Time.time + shootRate;
+				Rigidbody2D netRid;
+				var Clone = Instantiate(net, netDropPoint.position, netDropPoint.rotation);
+				netRid = Clone.GetComponent<Rigidbody2D> ();
+				netRid.AddForce (transform.right * 100);
+				netRid.AddForce (transform.up * 100);
+				//net_drop = true;
+				//nets--;
+				//netUpdate();
+				return;
+			}
+		}
+	}
+
 }
