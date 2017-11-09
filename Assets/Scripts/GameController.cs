@@ -11,6 +11,9 @@ public class GameController : MonoBehaviour
     public GameObject boat;
     public GameObject net;
     public Transform droppingPoint;
+
+	public Transform netDropPoint;
+
     public int crateCount;
     public float dropRate;
     bool net_drop;
@@ -175,5 +178,27 @@ public class GameController : MonoBehaviour
         }
     }
 
+	private float shootTime = 0;
+	private float shootRate = 0.5f;
+
+	void FixedUpdate(){
+		if (Input.GetKey("up"))
+		{
+
+			if (nets >= 1 && Time.time > shootTime)
+			{
+				shootTime = Time.time + shootRate;
+				Rigidbody2D netRid;
+				var Clone = Instantiate(net, netDropPoint.position, netDropPoint.rotation);
+				netRid = Clone.GetComponent<Rigidbody2D> ();
+				//netRid.AddForce (netDropPoint.velocity.x * 100);
+				netRid.AddForce (transform.up * 100);
+				net_drop = true;
+				nets--;
+				netUpdate();
+				return;
+			}
+		}
+	}
  
 }

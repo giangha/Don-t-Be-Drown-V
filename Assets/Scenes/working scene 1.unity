@@ -3884,6 +3884,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &317618680
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 317618681}
+  m_Layer: 0
+  m_Name: NetThrowingPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &317618681
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 317618680}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.81, y: 0.66, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 233095337}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &344493454
 GameObject:
   m_ObjectHideFlags: 0
@@ -4048,6 +4076,7 @@ MonoBehaviour:
   boat: {fileID: 233095334}
   net: {fileID: 1274894287080280, guid: 9437490f36f0fd4469647ca35ac92cfc, type: 2}
   droppingPoint: {fileID: 1685648600}
+  netDropPoint: {fileID: 317618681}
   crateCount: 1000
   dropRate: 3
   scoresound: {fileID: 307976286}
