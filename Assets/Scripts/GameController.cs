@@ -95,10 +95,10 @@ public class GameController : MonoBehaviour
     public void Alligator_Damage()
     {
              
-        boat_health = boat_health - 5;
+        boat_health = boat_health - 25;
         if(boat_health<=0)
         {
-           // SceneManager.LoadScene(3);
+           SceneManager.LoadScene(3);
             //end game
         }
         playerHealthSlider.value=boat_health;
@@ -136,15 +136,9 @@ public class GameController : MonoBehaviour
 						Destroy (totalCrates [i]);
 					}
                 }
-<<<<<<< HEAD
 
                 netUpdate();
 
-=======
-                //hintText.text = "Thank you very muchhhhhhhhhhhhh";
-                //nets = 5;
-                //netUpdate();
->>>>>>> parent of 05bf750... Merge remote-tracking branch 'origin/master'
             }
             else
             {

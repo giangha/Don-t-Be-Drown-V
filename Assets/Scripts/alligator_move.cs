@@ -20,6 +20,15 @@ public class alligator_move : MonoBehaviour
 
     void Start()
     {
+        caught = false;
+        StartCoroutine(waitThreeSeconds());
+
+      
+        
+    }
+    IEnumerator waitThreeSeconds()
+    {
+        yield return new WaitForSeconds(3);
         rb2d = gameObject.GetComponent<Rigidbody2D>();
 
         GameObject gameControllerObject = GameObject.FindGameObjectWithTag("GameController");
@@ -28,7 +37,7 @@ public class alligator_move : MonoBehaviour
             gameController = gameControllerObject.GetComponent<GameController>();
         }
         amin = gameObject.GetComponent<Animator>();
-        
+
     }
 
     // Update is called once per frame
@@ -50,12 +59,12 @@ public class alligator_move : MonoBehaviour
 
          float difference_between_locations = old_x_location - new_x_location;
          if (difference_between_locations < 0) difference_between_locations = difference_between_locations * -1;
-         if (difference_between_locations < 2.7)
+         if (difference_between_locations < 2.7 && !caught)
          {
             //  Invoke("Alligator_Attack", 0);
             gameController.Alligator_Damage();
-          //  Invoke("Reappear", 15);
-           // aligator.gameObject.SetActive(false);
+           Invoke("Reappear", 15);
+           aligator.gameObject.SetActive(false);
 
         }
 
@@ -89,6 +98,8 @@ public class alligator_move : MonoBehaviour
 
     void unCaught()
     {
+        gameController.Alligator_Damage();
+        Invoke("Reappear", 5);
         caught = false;
         speed = 1f;
     }
