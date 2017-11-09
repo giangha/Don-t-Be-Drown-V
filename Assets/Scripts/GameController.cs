@@ -136,9 +136,14 @@ public class GameController : MonoBehaviour
 						Destroy (totalCrates [i]);
 					}
                 }
-
+                //hintText.text = "Thank you very muchhhhhhhhhhhhh";
+<<<<<<< HEAD
+                //nets = 5;
+                //netUpdate();
+=======
+               // nets = 5;
                 netUpdate();
-
+>>>>>>> origin/master
             }
             else
             {
