@@ -16,6 +16,7 @@ public class alligator_move : MonoBehaviour
     public float TimeInNet;
     private Rigidbody2D rb2d;
     private float pushforce = 250f;
+   
 
     void Start()
     {
@@ -27,6 +28,7 @@ public class alligator_move : MonoBehaviour
             gameController = gameControllerObject.GetComponent<GameController>();
         }
         amin = gameObject.GetComponent<Animator>();
+        
     }
 
     // Update is called once per frame
@@ -84,10 +86,10 @@ public class alligator_move : MonoBehaviour
     void unCaught()
     {
         caught = false;
-        speed = 5f;
+        speed = 1f;
     }
 
-    void pushBack()
+   /* void pushBack()
     {
         
        
@@ -96,13 +98,13 @@ public class alligator_move : MonoBehaviour
         
     }
 
-
+    */
     void Reappear()
         {
         CancelInvoke();
         gameObject.SetActive(true); 
         rb2d.Sleep();
-        angry = false;
+       
         
         Vector3 position = new Vector3(10.73f,-4.6f,0);
         transform.position = position;
@@ -130,10 +132,10 @@ public class alligator_move : MonoBehaviour
         if (difference_between_locations < 0) difference_between_locations = difference_between_locations * -1;
         if (difference_between_locations < 1)
         {
-            pushBack();
-            angry = true;
+           // pushBack();
+            
             gameController.Alligator_Damage();
-
+            
         }
 
     }
