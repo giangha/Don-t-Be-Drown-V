@@ -4076,7 +4076,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crate: {fileID: 1933910837391278, guid: ad4851421c6604b3b816c417ee7c8c05, type: 2}
   boat: {fileID: 233095334}
-  net: {fileID: 1274894287080280, guid: 9437490f36f0fd4469647ca35ac92cfc, type: 2}
   droppingPoint: {fileID: 1685648600}
   netDropPoint: {fileID: 317618681}
   crateCount: 1000

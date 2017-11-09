@@ -125,14 +125,13 @@ public class GameController : MonoBehaviour
         {
             if (boat.transform.position.x < -7.5)
             {
-                /*for (int i = 0; i <= totalCrates.Count; i++) {
-					Destroy (totalCrates [i]);
-				}*/
                 totalCrates = GameObject.FindGameObjectsWithTag("Crate");
                 for (int i = 0; i < totalCrates.Length; i++)
                 {
-                    AddScore(10);
-                    Destroy(totalCrates[i]);
+					if (totalCrates [i].transform.position.x < -7.5) {
+						AddScore (10);				
+						Destroy (totalCrates [i]);
+					}
                 }
                 //hintText.text = "Thank you very muchhhhhhhhhhhhh";
                 nets = 5;
