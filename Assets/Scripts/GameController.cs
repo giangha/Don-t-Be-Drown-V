@@ -98,7 +98,7 @@ public class GameController : MonoBehaviour
         boat_health = boat_health - 5;
         if(boat_health<=0)
         {
-           // SceneManager.LoadScene(3);
+           SceneManager.LoadScene(3);
             //end game
         }
         playerHealthSlider.value=boat_health;
@@ -141,8 +141,12 @@ public class GameController : MonoBehaviour
 
 =======
                 //hintText.text = "Thank you very muchhhhhhhhhhhhh";
+<<<<<<< HEAD
                 nets = 5;
 >>>>>>> parent of 4412838... new versuon
+=======
+              //  nets = 5;
+>>>>>>> parent of 650d87c... Revert "Part 1 Update"
                 netUpdate();
 
 =======
@@ -158,6 +162,20 @@ public class GameController : MonoBehaviour
             return;
         }
 		
+<<<<<<< HEAD
+=======
+        if (Input.GetKeyUp("up"))
+        {
+            
+            
+                if(nets>0)
+                //nets--;
+                netUpdate();
+                return;
+            
+        }
+		
+>>>>>>> parent of 650d87c... Revert "Part 1 Update"
         if (startingTime <= 0)
         {
             if (score >= 50)

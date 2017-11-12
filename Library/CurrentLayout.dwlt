@@ -15,6 +15,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 44
     width: 1404
     height: 856
@@ -34,6 +35,15 @@ MonoBehaviour:
 >>>>>>> parent of 4412838... new versuon
   m_MinSize: {x: 950, y: 300}
 >>>>>>> parent of 05bf750... Merge remote-tracking branch 'origin/master'
+=======
+    y: 43
+    width: 1368
+    height: 829
+  m_ShowMode: 4
+  m_Title: 
+  m_RootView: {fileID: 6}
+  m_MinSize: {x: 950, y: 392}
+>>>>>>> parent of 650d87c... Revert "Part 1 Update"
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -53,6 +63,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     width: 1404
@@ -75,6 +86,14 @@ MonoBehaviour:
   vertical: 0
   controlID: 65
 >>>>>>> parent of 4412838... new versuon
+=======
+    width: 1368
+    height: 779
+  m_MinSize: {x: 679, y: 342}
+  m_MaxSize: {x: 12004, y: 8042}
+  vertical: 0
+  controlID: 103
+>>>>>>> parent of 650d87c... Revert "Part 1 Update"
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -89,6 +108,7 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     x: 1119
@@ -113,6 +133,14 @@ MonoBehaviour:
   m_MinSize: {x: 277, y: 71}
   m_MaxSize: {x: 4002, y: 4021}
 >>>>>>> parent of 4412838... new versuon
+=======
+    x: 1088
+    y: 0
+    width: 280
+    height: 779
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+>>>>>>> parent of 650d87c... Revert "Part 1 Update"
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -136,6 +164,7 @@ MonoBehaviour:
     y: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 277
     height: 488
   m_MinSize: {x: 202, y: 221}
@@ -152,6 +181,12 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
 >>>>>>> parent of 4412838... new versuon
+=======
+    width: 269
+    height: 472
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+>>>>>>> parent of 650d87c... Revert "Part 1 Update"
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -172,6 +207,7 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     y: 488
@@ -206,6 +242,19 @@ MonoBehaviour:
   m_Selected: 0
   m_LastSelected: 1
 >>>>>>> parent of 4412838... new versuon
+=======
+    y: 472
+    width: 1088
+    height: 307
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 18}
+  m_Panes:
+  - {fileID: 13}
+  - {fileID: 18}
+  m_Selected: 1
+  m_LastSelected: 0
+>>>>>>> parent of 650d87c... Revert "Part 1 Update"
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -227,6 +276,7 @@ MonoBehaviour:
     y: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1404
     height: 856
   m_MinSize: {x: 950, y: 392}
@@ -238,6 +288,10 @@ MonoBehaviour:
 =======
     width: 1536
     height: 791
+=======
+    width: 1368
+    height: 829
+>>>>>>> parent of 650d87c... Revert "Part 1 Update"
   m_MinSize: {x: 950, y: 300}
 >>>>>>> parent of 4412838... new versuon
   m_MaxSize: {x: 10000, y: 10000}
@@ -259,6 +313,7 @@ MonoBehaviour:
     y: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1404
 =======
     width: 1440
@@ -266,6 +321,9 @@ MonoBehaviour:
 =======
     width: 1536
 >>>>>>> parent of 4412838... new versuon
+=======
+    width: 1368
+>>>>>>> parent of 650d87c... Revert "Part 1 Update"
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -287,6 +345,7 @@ MonoBehaviour:
     x: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 836
     width: 1404
 =======
@@ -297,6 +356,10 @@ MonoBehaviour:
     y: 771
     width: 1536
 >>>>>>> parent of 4412838... new versuon
+=======
+    y: 809
+    width: 1368
+>>>>>>> parent of 650d87c... Revert "Part 1 Update"
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -320,6 +383,7 @@ MonoBehaviour:
     y: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1119
     height: 806
   m_MinSize: {x: 406, y: 342}
@@ -340,6 +404,14 @@ MonoBehaviour:
   vertical: 1
   controlID: 66
 >>>>>>> parent of 4412838... new versuon
+=======
+    width: 1088
+    height: 779
+  m_MinSize: {x: 404, y: 342}
+  m_MaxSize: {x: 8004, y: 8042}
+  vertical: 1
+  controlID: 104
+>>>>>>> parent of 650d87c... Revert "Part 1 Update"
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -358,6 +430,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     width: 1119
@@ -380,6 +453,14 @@ MonoBehaviour:
   vertical: 0
   controlID: 67
 >>>>>>> parent of 4412838... new versuon
+=======
+    width: 1088
+    height: 472
+  m_MinSize: {x: 404, y: 221}
+  m_MaxSize: {x: 8004, y: 4021}
+  vertical: 0
+  controlID: 105
+>>>>>>> parent of 650d87c... Revert "Part 1 Update"
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -394,6 +475,7 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     x: 277
@@ -412,6 +494,12 @@ MonoBehaviour:
     width: 922
     height: 449
 >>>>>>> parent of 4412838... new versuon
+=======
+    x: 269
+    y: 0
+    width: 819
+    height: 472
+>>>>>>> parent of 650d87c... Revert "Part 1 Update"
   m_MinSize: {x: 204, y: 221}
   m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 16}
@@ -476,6 +564,7 @@ MonoBehaviour:
     x: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 582
     width: 1117
     height: 297
@@ -489,6 +578,11 @@ MonoBehaviour:
     width: 1223
     height: 271
 >>>>>>> parent of 4412838... new versuon
+=======
+    y: 564
+    width: 1086
+    height: 286
+>>>>>>> parent of 650d87c... Revert "Part 1 Update"
   m_SearchFilter:
     m_NameFilter: 
     m_ClassNames: []
@@ -501,12 +595,13 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
+<<<<<<< HEAD
 <<<<<<< HEAD
   m_LastProjectPath: /Users/thangpham/Desktop/Don-t-Be-Drown-V
   m_IsLocked: 0
@@ -531,6 +626,15 @@ MonoBehaviour:
     m_LastClickedID: 10962
     m_ExpandedIDs: 00000000d22a0000722b0000902b0000d62b000000ca9a3bffffff7f
 >>>>>>> parent of 4412838... new versuon
+=======
+  m_LastProjectPath: C:\Users\kamil\Downloads\Don-t-Be-Drown-V
+  m_IsLocked: 0
+  m_FolderTreeState:
+    scrollPos: {x: 0, y: 122}
+    m_SelectedIDs: 282c0000
+    m_LastClickedID: 11304
+    m_ExpandedIDs: 00000000f62a0000a02b0000c42b0000022c000000ca9a3bffffff7f
+>>>>>>> parent of 650d87c... Revert "Part 1 Update"
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -560,6 +664,7 @@ MonoBehaviour:
     m_LastClickedID: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 000000004c260000282700005a270000aa270000
 =======
     m_ExpandedIDs: 0000000036260000122700004427000094270000
@@ -567,6 +672,9 @@ MonoBehaviour:
 =======
     m_ExpandedIDs: 00000000d22a0000722b0000902b0000d62b0000
 >>>>>>> parent of 4412838... new versuon
+=======
+    m_ExpandedIDs: 00000000f62a0000a02b0000c42b0000022c0000
+>>>>>>> parent of 650d87c... Revert "Part 1 Update"
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -591,12 +699,17 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
+<<<<<<< HEAD
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
 <<<<<<< HEAD
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 
 =======
+=======
+    m_SelectedInstanceIDs: 70070000
+    m_LastClickedInstanceID: 1904
+>>>>>>> parent of 650d87c... Revert "Part 1 Update"
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
 >>>>>>> parent of 05bf750... Merge remote-tracking branch 'origin/master'
@@ -654,6 +767,7 @@ MonoBehaviour:
     serializedVersion: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 1121
     y: 94
     width: 283
@@ -671,6 +785,13 @@ MonoBehaviour:
     height: 720
 >>>>>>> parent of 4412838... new versuon
   m_ScrollPosition: {x: 0, y: 0}
+=======
+    x: 1090
+    y: 92
+    width: 278
+    height: 758
+  m_ScrollPosition: {x: 0, y: 345.89258}
+>>>>>>> parent of 650d87c... Revert "Part 1 Update"
   m_InspectorMode: 0
   m_PreviewResizer:
     m_CachedPref: 160
@@ -707,6 +828,7 @@ MonoBehaviour:
     height: 467
 =======
     y: 92
+<<<<<<< HEAD
     width: 301
     height: 428
 >>>>>>> parent of 4412838... new versuon
@@ -729,6 +851,15 @@ MonoBehaviour:
 =======
     m_ExpandedIDs: b0f4ffff00000000
 >>>>>>> parent of 4412838... new versuon
+=======
+    width: 267
+    height: 451
+  m_TreeViewState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 3e2d0000
+    m_LastClickedID: 11582
+    m_ExpandedIDs: aaf3ffff000000007e2d0000
+>>>>>>> parent of 650d87c... Revert "Part 1 Update"
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -775,6 +906,7 @@ MonoBehaviour:
     serializedVersion: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 279
     y: 94
     width: 838
@@ -791,6 +923,12 @@ MonoBehaviour:
     width: 918
     height: 428
 >>>>>>> parent of 4412838... new versuon
+=======
+    x: 271
+    y: 92
+    width: 815
+    height: 451
+>>>>>>> parent of 650d87c... Revert "Part 1 Update"
   m_SceneLighting: 1
   lastFramingTime: 0
   m_2DMode: 1
@@ -869,6 +1007,7 @@ MonoBehaviour:
     serializedVersion: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 323
     y: 17
     width: 973
@@ -885,6 +1024,12 @@ MonoBehaviour:
     width: 918
     height: 428
 >>>>>>> parent of 4412838... new versuon
+=======
+    x: 271
+    y: 92
+    width: 815
+    height: 451
+>>>>>>> parent of 650d87c... Revert "Part 1 Update"
   m_MaximizeOnPlay: 0
   m_Gizmos: 0
   m_Stats: 0
@@ -893,6 +1038,7 @@ MonoBehaviour:
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     m_HBaseRangeMin: -486.5
@@ -911,6 +1057,12 @@ MonoBehaviour:
     m_VBaseRangeMin: -205.5
     m_VBaseRangeMax: 205.5
 >>>>>>> parent of 4412838... new versuon
+=======
+    m_HBaseRangeMin: -407.5
+    m_HBaseRangeMax: 407.5
+    m_VBaseRangeMin: -217
+    m_VBaseRangeMax: 217
+>>>>>>> parent of 650d87c... Revert "Part 1 Update"
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -936,6 +1088,7 @@ MonoBehaviour:
       y: 17
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       width: 973
       height: 484
     m_Scale: {x: 1, y: 1}
@@ -952,12 +1105,19 @@ MonoBehaviour:
     m_Scale: {x: 1, y: 1}
     m_Translation: {x: 459, y: 205.5}
 >>>>>>> parent of 4412838... new versuon
+=======
+      width: 815
+      height: 434
+    m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 407.5, y: 217}
+>>>>>>> parent of 650d87c... Revert "Part 1 Update"
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       x: -436.5
@@ -985,12 +1145,22 @@ MonoBehaviour:
       y: -205.5
       width: 918
       height: 411
+=======
+      x: -407.5
+      y: -217
+      width: 815
+      height: 434
+>>>>>>> parent of 650d87c... Revert "Part 1 Update"
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
+<<<<<<< HEAD
   m_LastWindowPixelSize: {x: 918, y: 428}
 >>>>>>> parent of 4412838... new versuon
+=======
+  m_LastWindowPixelSize: {x: 815, y: 451}
+>>>>>>> parent of 650d87c... Revert "Part 1 Update"
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000100000100
@@ -1019,6 +1189,7 @@ MonoBehaviour:
     x: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 582
     width: 1117
     height: 297
@@ -1032,3 +1203,8 @@ MonoBehaviour:
     width: 1223
     height: 272
 >>>>>>> parent of 4412838... new versuon
+=======
+    y: 564
+    width: 1086
+    height: 286
+>>>>>>> parent of 650d87c... Revert "Part 1 Update"

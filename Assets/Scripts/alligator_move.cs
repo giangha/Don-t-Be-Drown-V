@@ -16,20 +16,30 @@ public class alligator_move : MonoBehaviour
     public float TimeInNet;
     private Rigidbody2D rb2d;
     private float pushforce = 250f;
-   
+
 
     void Start()
     {
-        rb2d = gameObject.GetComponent<Rigidbody2D>();
+        caught = false;
+        StartCoroutine(waitThreeSeconds());
 
-        GameObject gameControllerObject = GameObject.FindGameObjectWithTag("GameController");
-        if (gameControllerObject != null)
-        {
-            gameController = gameControllerObject.GetComponent<GameController>();
-        }
-        amin = gameObject.GetComponent<Animator>();
-        
+
+
     }
+    IEnumerator waitThreeSeconds()
+    {
+             yield return new WaitForSeconds(3);
+             rb2d = gameObject.GetComponent<Rigidbody2D>();
+             GameObject gameControllerObject = GameObject.FindGameObjectWithTag("GameController");
+
+ 
+             gameController = gameControllerObject.GetComponent<GameController>();
+        
+            amin = gameObject.GetComponent<Animator>();
+        
+
+    }
+
 
     // Update is called once per frame
     void Update()
@@ -37,7 +47,7 @@ public class alligator_move : MonoBehaviour
         amin.SetBool("angry", angry);
         amin.SetBool("sleep", sleep);
         amin.SetBool("caught", caught);
-         target = GameObject.FindWithTag("Boat").transform;
+        target = GameObject.FindWithTag("Boat").transform;
 
          float step = speed * Time.deltaTime;
          Vector3 offset = new Vector3(0, 0f, 0);
@@ -50,12 +60,12 @@ public class alligator_move : MonoBehaviour
 
          float difference_between_locations = old_x_location - new_x_location;
          if (difference_between_locations < 0) difference_between_locations = difference_between_locations * -1;
-         if (difference_between_locations < 2.7)
+         if (difference_between_locations < 2.7 && !caught)
          {
             //  Invoke("Alligator_Attack", 0);
             gameController.Alligator_Damage();
-          //  Invoke("Reappear", 15);
-           // aligator.gameObject.SetActive(false);
+            Invoke("Reappear", 15);
+            aligator.gameObject.SetActive(false);
 
         }
 
@@ -68,12 +78,12 @@ public class alligator_move : MonoBehaviour
        if (other.gameObject.CompareTag("Net"))
        {
             //Invoke("Reappear", 15);
-           // aligator.gameObject.SetActive(false);
             other.gameObject.SetActive(false);
             caught = true;
             speed = .1f;
             Invoke("unCaught", 5);
-            Invoke("Reappear", 15);
+           
+
         }
       //  if (other.gameObject.CompareTag("Boat")) {
        //     angry = true; }
@@ -89,8 +99,10 @@ public class alligator_move : MonoBehaviour
 
     void unCaught()
     {
-        caught = false;
         speed = 1f;
+        caught = false;
+        aligator.gameObject.SetActive(false);
+        Invoke("Reappear",5);
     }
 
    /* void pushBack()
@@ -108,8 +120,9 @@ public class alligator_move : MonoBehaviour
         CancelInvoke();
         gameObject.SetActive(true); 
         rb2d.Sleep();
-       
-        
+
+
+
         Vector3 position = new Vector3(10.73f,-4.6f,0);
         transform.position = position;
         
