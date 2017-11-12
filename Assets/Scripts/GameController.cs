@@ -137,7 +137,12 @@ public class GameController : MonoBehaviour
 					}
                 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+                //hintText.text = "Thank you very muchhhhhhhhhhhhh";
+                nets = 5;
+>>>>>>> parent of 4412838... new versuon
                 netUpdate();
 
 =======
